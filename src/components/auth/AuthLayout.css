@@ -1,0 +1,103 @@
+/* ==========================================================================
+   AuthLayout.css
+   Styles for the main full-screen centering wrapper and authentication card.
+   ========================================================================== */
+
+/**
+ * 1. Full-screen centering wrapper.
+ *    Displays a light gradient background and centers child components both vertically & horizontally.
+ */
+.auth-layout {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f0f4ff 0%, #e8edf5 100%);
+    padding: 20px;
+    text-align: left;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/**
+ * 2. Main card container.
+ *    Elevated white card with soft shadows and rounded corners.
+ */
+.auth-layout__container {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 48px 40px 40px;
+    box-shadow: 0 20px 60px rgba(74, 108, 247, 0.12), 0 8px 24px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+/**
+ * 3. Branding & Logo styling.
+ */
+.auth-layout__logo {
+    text-align: center;
+    margin-bottom: 28px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a2332;
+    letter-spacing: -0.5px;
+}
+
+.auth-layout__logo span {
+    color: #4a6cf7; /* Accent color highlight */
+}
+
+/**
+ * 4. Header & Subtitle typography.
+ */
+.auth-layout__header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.auth-layout__title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a2332;
+    margin: 0 0 8px;
+    letter-spacing: -0.3px;
+}
+
+.auth-layout__subtitle {
+    font-size: 15px;
+    color: #6c7a89;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/**
+ * 5. Main Form Body & Optional Graphic/Illustration footer.
+ */
+.auth-layout__content {
+    width: 100%;
+}
+
+.auth-layout__illustration {
+    text-align: center;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #eef2f7;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 576px) {
+    .auth-layout__container {
+        padding: 32px 20px 28px;
+        border-radius: 16px;
+    }
+
+    .auth-layout__title {
+        font-size: 22px;
+    }
+
+    .auth-layout__subtitle {
+        font-size: 14px;
+    }
+}
