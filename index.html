@@ -8,6 +8,12 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.jsx">
+  
+  const t = localStorage.getItem('psms-theme') ||
+    (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', t);
+
+    </script>
   </body>
 </html>

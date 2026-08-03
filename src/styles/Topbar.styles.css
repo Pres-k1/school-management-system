@@ -1,0 +1,240 @@
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 24px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  max-width: 420px;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  padding: 8px 12px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  background: none;
+  flex: 1;
+  font-size: 13.5px;
+  color: var(--text-h);
+}
+
+.search-clear {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.icon-btn-wrap {
+  position: relative;
+}
+
+.icon-btn {
+  position: relative;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-h);
+}
+
+.icon-btn:hover {
+  background: var(--bg-soft);
+}
+
+.notif-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #ef4444;
+  color: white;
+  font-size: 10px;
+  min-width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
+}
+
+/* Frosted panel — background/border use theme-aware --glass-bg/--glass-border
+   variables, and text color is set explicitly here rather than inherited,
+   so it stays readable in both light and dark mode. */
+.glass-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  min-width: 260px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+  padding: 8px;
+  z-index: 60;
+  color: var(--text-h);
+  animation: dropdown-in 0.15s ease-out;
+}
+
+@keyframes dropdown-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-header {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text-h);
+  padding: 6px 8px 10px;
+  border-bottom: 1px solid var(--glass-border);
+  margin-bottom: 6px;
+}
+
+.dropdown-list {
+  max-height: 320px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dropdown-empty {
+  padding: 16px 8px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.notif-item {
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.notif-item:hover {
+  background: rgba(127, 127, 127, 0.1);
+}
+
+.notif-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  margin-top: 5px;
+  flex-shrink: 0;
+  background: #3b82f6;
+}
+
+.notif-dot.success { background: #22c55e; }
+.notif-dot.warning { background: #f59e0b; }
+.notif-dot.error { background: #ef4444; }
+
+.notif-message {
+  font-size: 13px;
+  color: var(--text-h);
+}
+
+.notif-time {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.profile-dropdown {
+  min-width: 200px;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 9px 10px;
+  border-radius: 8px;
+  background: none;
+  border: none;
+  font: inherit;
+  color: var(--text-h);
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background: rgba(127, 127, 127, 0.12);
+}
+
+.dropdown-item.logout {
+  color: #ef4444;
+}
+
+.user-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  color: var(--text-h);
+}
+
+.avatar.photo {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.avatar.letters {
+  background: #6c5ce7;
+  color: #fff;
+}
+
+.name {
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-h);
+}
+
+.role {
+  font-size: 11.5px;
+  color: var(--muted);
+  line-height: 1.2;
+}
+
+.search-icon {
+  font-size: 13px;
+  opacity: 0.6;
+}
