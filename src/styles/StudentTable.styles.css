@@ -1,0 +1,142 @@
+.student-table {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.student-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.student-table thead {
+  background: var(--bg-soft);
+}
+
+.student-table th {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.student-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13.5px;
+  color: var(--text);
+  vertical-align: middle;
+}
+
+.student-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.student-table tbody tr:hover {
+  background: var(--bg-soft);
+}
+
+.student-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.avatar.tone-a { background: #3358e0; }
+.avatar.tone-b { background: #16a34a; }
+.avatar.tone-c { background: #d97706; }
+.avatar.tone-d { background: #7c3aed; }
+
+.student-name {
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.student-email {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.class-pill {
+  display: inline-block;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 12px;
+  margin-right: 4px;
+}
+
+.parent-phone {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.status-badge.paid {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+.status-badge.partial {
+  background: var(--warning-bg);
+  color: var(--warning);
+}
+
+.status-badge.pending {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+
+.col-actions {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.action-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-btn:hover {
+  background: var(--bg-soft);
+}
+
+.empty-row {
+  text-align: center;
+  color: var(--muted);
+  padding: 28px 16px;
+}
