@@ -132,7 +132,8 @@ p {
   display: flex;
   min-height: 100vh;
   align-items: stretch;
-  isolation: isolate; /* keeps the wallpaper blobs contained to this layer */
+  isolation: isolate;
+  /* keeps the wallpaper blobs contained to this layer */
   overflow: hidden;
 }
 
