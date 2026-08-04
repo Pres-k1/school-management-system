@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import SearchComponent from "./search.component";
 import { useSearch } from "../context/SearchContext";
 import { useNotifications } from "../context/NotificationContext";
 import { useUser } from "../context/UserContext";
@@ -59,21 +60,22 @@ function Topbarcomponent() {
 
   return (
     <div className="topbar">
-      <div className="search-box">
-        <span className="search-icon">🔍</span>
-        <input
-          className="search-input"
-          type="text"
-          placeholder="Search students, staff or fees..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-        {searchTerm && (
-          <button className="search-clear" onClick={() => setSearchTerm("")} aria-label="Clear search">
-            ✕
-          </button>
-        )}
-      </div>
+      <SearchComponent
+        value={searchTerm}
+        onChange={setSearchTerm}
+        onClear={() => setSearchTerm("")}
+        onSelect={setSearchTerm}
+        placeholder="Search students, staff or fees..."
+        ariaLabel="Global search"
+        suggestions={[
+          "Students",
+          "Teachers",
+          "Parents",
+          "Admissions",
+          "Fee Reports",
+          "Academic Records",
+        ]}
+      />
 
       <div className="topbar-right">
         <button

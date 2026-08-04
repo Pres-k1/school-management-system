@@ -19,6 +19,7 @@ const NAV_GROUPS = [
     ],
   },
   { label: "Teachers", to: "/teachers" },
+  { label: "Communications", to: "/communications" },
   { label: "Parents", to: "/parents"},
   { label: "Classes", to: "/classes" },
   { label: "Subjects", to: "/subjects" },

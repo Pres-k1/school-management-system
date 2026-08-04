@@ -5,10 +5,11 @@ import { NotificationProvider } from "./context/NotificationContext";
 import { UserProvider } from "./context/UserContext";
 import { ThemeProvider } from "./context/ThemeContext";
 import "./index.css";
-import Studentdirectorypage from "./pages/studentdirectory.page";
+import Studentdirectorypage from "./pages/Studentdirectory.page";
 import Financemanagement from "./pages/financemangement.page";
 import Analytics from "./pages/analytics.page";
 import AcademicManagement from "./pages/academicmanagement.page";
+import Communicationspage from "./pages/communications.page";
 
 function App() {
   return (
@@ -22,7 +23,9 @@ function App() {
             <Route path="/students" element={<Studentdirectorypage />} />
             <Route path="/finance" element={<Financemanagement />} />
             <Route path="/academic" element={<AcademicManagement />} />
-            <Route path="/analytics" element={<Analytics />} />  
+            <Route path="/analytics" element={<Analytics />} /> 
+            <Route path="/communication" element={<Communicationspage />} />
+             
           </Routes>
         </NotificationProvider>
       </SearchProvider>
