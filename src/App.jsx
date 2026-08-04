@@ -7,6 +7,7 @@ import { ThemeProvider } from "./context/ThemeContext";
 import "./index.css";
 import Studentdirectorypage from "./pages/Studentdirectory.page";
 import Financemanagement from "./pages/financemangement.page";
+import Analytics from "./pages/analytics.page";
 import AcademicManagement from "./pages/academicmanagement.page";
 import Communicationspage from "./pages/communications.page";
 
@@ -18,16 +19,18 @@ function App() {
           <SearchProvider>
             <NotificationProvider>
               <Routes>
-                <Route path="/" element={<Navigate to="/students" replace />} />
-                <Route path="/students" element={<Studentdirectorypage />} />
-                <Route path="/finance" element={<Financemanagement />} />
-                <Route path="/academic" element={<AcademicManagement />} />
-                <Route path="/communications" element={<Communicationspage />} />
-              </Routes>
-            </NotificationProvider>
-          </SearchProvider>
-        </UserProvider>
-      </ThemeProvider>
+            <Route path="/" element={<Navigate to="/students" replace />} />
+            <Route path="/students" element={<Studentdirectorypage />} />
+            <Route path="/finance" element={<Financemanagement />} />
+            <Route path="/academic" element={<AcademicManagement />} />
+            <Route path="/analytics" element={<Analytics />} /> 
+            <Route path="/communication" element={<Communicationspage />} />
+             
+          </Routes>
+        </NotificationProvider>
+      </SearchProvider>
+    </UserProvider>
+    </ThemeProvider>
     </BrowserRouter>
   );
 }

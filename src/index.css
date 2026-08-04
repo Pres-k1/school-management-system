@@ -429,6 +429,15 @@ table{
     border-radius: 10px;
 }
 
+/* Page layout: sidebar + scrollable main content */
+.app-layout {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  align-items: stretch;
+  isolation: isolate;
+  /* keeps the wallpaper blobs contained to this layer */
+  overflow: hidden;
 .p1{
     font-size: 15px;
     font-weight: bold;
@@ -536,3 +545,28 @@ table{
     margin-left: 20px;
 }
 
+
+/*@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --bg-soft: #101116;
+    --border: #2e303a;
+    --code-bg: #1f2028;
+    --accent: #c084fc;
+    --accent-bg: rgba(192, 132, 252, 0.15);
+    --accent-border: rgba(192, 132, 252, 0.5);
+    --social-bg: rgba(47, 48, 58, 0.5);
+    --shadow: rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+    --muted: #9ca3af;
+
+    --primary: #5b7cf0;
+    --primary-hover: #7691f4;
+    --primary-bg: rgba(91, 124, 240, 0.18);
+
+    --success-bg: rgba(22, 163, 74, 0.18);
+    --warning-bg: rgba(180, 83, 9, 0.18);
+    --danger-bg: rgba(220, 38, 38, 0.18);
+  }
+}*/
