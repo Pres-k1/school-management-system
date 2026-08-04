@@ -7,6 +7,7 @@ import { ThemeProvider } from "./context/ThemeContext";
 import "./index.css";
 import Studentdirectorypage from "./pages/studentdirectory.page";
 import Financemanagement from "./pages/financemangement.page";
+import Analytics from "./pages/analytics.page";
 import AcademicManagement from "./pages/academicmanagement.page";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/students" element={<Studentdirectorypage />} />
             <Route path="/finance" element={<Financemanagement />} />
             <Route path="/academic" element={<AcademicManagement />} />
+            <Route path="/analytics" element={<Analytics />} />  
           </Routes>
         </NotificationProvider>
       </SearchProvider>
